@@ -130,13 +130,14 @@ nav>h1 {
 }
 .hex-box {
     width: 960px;
-    height: 695px;  
+    height: 694px;  
     display: grid;
     justify-content: center; 
     justify-items: center;       
     align-content: center;
     align-items: center;
     border-bottom: 1px solid #e4e9eb;
+    padding-top: 5px;
 }
 
 .hexagon-row-1 {
@@ -153,14 +154,15 @@ nav>h1 {
 }
 .hexagon-row-2 {
     width: 982px;
-    height: 110px;
+    height: 100px;
     display: grid;
     grid-template: 110px / repeat(5, 180px);
     justify-content: space-between;
     justify-items: center;
     align-items: center;    
-    margin-top: 65px;
-    margin-bottom: 65px;
+    align-content: center;
+    margin-top: 68px;
+    margin-bottom: 68px;
 }
 
 .hexagon {    
@@ -290,7 +292,7 @@ nav>h1 {
     font-weight: 300;    
 }
 .fio>h2{    
-    font-size: 17px;
+    font-size: 18px;
     color: rgba(32, 129, 109, 255);
     font-weight: 300;
 }
@@ -319,13 +321,16 @@ a>img {
 #about .border {
     grid-area: 1 / 1 / span 3 / span 3;
     height: 316px;
-    width: 822px;
+    width: 820px;
     border-right: 1px solid #219d84;
     border-left: 1px solid #219d84;
 }
 
+/*                                       FOOTER                                     */
 /*                                   SECTION GET IN TOUCH                        */
-
+footer {
+    height: 607px
+}
 #get-in-touch {
     height: 564px;    
     display: grid;
@@ -342,7 +347,7 @@ a>img {
     align-items: center;    
     width: 960px;
     height: 542px;
-    margin-top: 2px;
+    margin-top: 7px;
     border-top: 1px solid #2b2b2b;
     border-bottom: 1px solid #2b2b2b;
 }
@@ -352,7 +357,7 @@ a>img {
     width: 780px;
     justify-self: start;  
     font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular";
-    margin-bottom: 10px; 
+    margin-bottom: 22px; 
 }
 .feedback-info>h2 {    
     font-size: 23pt;
@@ -393,11 +398,11 @@ input {
 }
 .textarea {
     width: 565px;
-    height: 135px;
+    height: 140px;
     border: none;
     background: #454545;
     padding-left: 15px;
-    padding-top: 15px;
+    padding-top: 10px;
     resize: none;  
     color: rgba(190, 190, 190, 255);   
 }
@@ -412,6 +417,7 @@ input {
     border: none;
     width: 90px;
     height: 37px;    
+    margin-top: -5px;
 }
 
 .quote { 
@@ -444,10 +450,9 @@ div>img {
     padding-left: 3px;
 }
 
-/*                                       FOOTER                                     */
 
-footer {
-    display: grid;
+.copyright {
+    display: block;
     height: 41px;    
     font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular";
     font-size: 8.65655pt;
