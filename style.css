@@ -51,46 +51,70 @@ body {
 /*                                         section HEADER + NAV                             */
 
 header {
-    height: 63px;      
-    background-color: #323232;    
+    height: 63px;  
+    width: 1020px;    
+    background-color: #323232; 
+    position: relative;   
+}
+header:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 29px 48px 0 48px;
+    border-color: #323232 transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+    top: 62px;
+    transform: translateX(-50%);
 }
 nav {
     display: flex;    
-    justify-content: space-between;
-    padding-top: 0;        
+    justify-content: center;               
 }
-.nav1, .nav2 {
-    display: block;
-    width: 450px;
-    height: 50px;    
-    margin: 0 30px;
-    padding-top: 25px;
-    border-bottom: 1px solid #e4e9eb;
-    color: rgba(255, 255, 255, 255); 
+ul {
+    display: flex;
+    list-style: none; 
+    height: 63px;   
+    width: 800px;    
+    justify-content: center;    
+    margin-left: 5px;
 }
-a>span {
-    color: rgba(46, 179, 152, 255);
-    padding-right: 20px; 
+li {   
+    display: flex; 
+    width: 80px;
+    height: 63px; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 3px;            
 }
-.nav1>a, .nav2>a {        
+li a {
     font-size: 7.2pt;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 255);
     font-family: "Lato-Bold", "AdobeInvisFont", "MyriadPro";    
-    text-decoration: none;             
+    text-decoration: none;
 }
-.nav1 {
-    text-align: right;
+li a>span {
+    color: rgba(46, 179, 152, 255);    
 }
-.nav2>a {
-    padding-right: 20px;
+li:nth-child(2) {
+    width: 20px;
+    margin-right: -20px;
+    margin-left: -10px;
 }
-nav>img {
-    padding: 8px 15px 25px 15px;
-    size: 100%;    
-    background-image: url("assets/images/vector.png");
-    background-position: bottom;
+li:nth-child(6) {
+    width: 20px;
+    margin-left: -20px;
+    margin-right: -5px;
 }
+.splitter {
+    width: 2px;
+    height: 2px;
+    background: #484c5f;
+    border-radius: 100%;
+}
+
 nav>h1 {
     display: none;
 }
