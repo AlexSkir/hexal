@@ -86,7 +86,7 @@ li {
     height: 63px; 
     justify-content: center;
     align-items: center;
-    padding-top: 3px;            
+    padding-top: 6px;            
 }
 li a {
     font-size: 7.2pt;
@@ -238,7 +238,7 @@ nav>h1 {
     grid-area: 1 / 4 / span 1 / span 1;
 }
 
-.sep-left {
+.line-left {
     width: 410px;
     height: 1px;
     background: #e4e9eb;
@@ -246,7 +246,7 @@ nav>h1 {
     top: 74px;
     left: 30px;
 }
-.sep-right {
+.line-right {
     width: 410px;
     height: 1px;
     background: #e4e9eb;
