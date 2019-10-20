@@ -85,7 +85,7 @@ header:after {
   text-transform: uppercase;
 }
 .nav-link-active {
-    color: rgba(46, 179, 152, 255);    
+  color: rgba(46, 179, 152, 255);    
 }
 .nav-logo-item {
   display: flex;
@@ -114,9 +114,11 @@ nav>h1 {
   display: flex;
   flex-direction: column;
 }
+
 /*                                      section HEXAGONS                          */
 
 #hexagons {
+  position: relative;
   display: flex;
   height: 721px;
   margin-top: 92px;   
@@ -185,7 +187,6 @@ nav>h1 {
   align-items: center;
   align-content: center;
 }
-
 .hexagon {    
   width: 100%;
   height: 100%;
@@ -262,7 +263,6 @@ nav>h1 {
   background-image: url("assets/images/pic13.png");    
   grid-area: 1 / 4 / span 1 / span 1;
 }
-
 .line-top-left {
   position: absolute;
   top: -76px;
@@ -371,7 +371,6 @@ nav>h1 {
   background: #a5dbd4;
 }
 
-/*                                       FOOTER                                     */
 /*                                   SECTION GET IN TOUCH                        */
 footer {
   height: 711px;
@@ -419,7 +418,6 @@ footer {
   color: rgba(190, 190, 190, 255);
   letter-spacing: 0.04rem;
 }
-
 form {
   width: 724px;
   height: 522px;
@@ -469,7 +467,6 @@ input {
   width: 113px;
   height: 44px;
 }
-
 .quote { 
   grid-area: 2 / 2 / span 1 / span 1;
   margin-top: -2px;
@@ -503,7 +500,6 @@ input {
 .location>img {
   padding-left: 3px;
 }
-
 .copyright {
   display: flex;
   height: 50px;
@@ -515,4 +511,10 @@ input {
   word-spacing: 0.07rem;
   background: #222222;
   border: 1px solid #222222;
+}
+
+@media all and (max-width: 1100px) {
+  .line-top-left, .line-top-right {
+    display: none;
+  }
 }
