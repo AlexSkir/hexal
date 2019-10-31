@@ -129,7 +129,9 @@ nav>h1 {
 }
 .hex-box {
   position: relative;
+  display: -ms-flexbox;
   display: grid;
+  -ms-flex-direction: column;
   width: 1158px;
   height: 850px;
   justify-content: center;
@@ -148,10 +150,12 @@ nav>h1 {
 }
 .hexagon-row-1 {
   position: relative;
+  display: -ms-flexbox;
   display: grid;
   width: 1025px;
   height: 184px;
   grid-template: 272px / repeat(4, 225px);
+  justify-content: space-between;
   justify-content: space-evenly;
   justify-items: center;
   align-items: center;
@@ -176,6 +180,7 @@ nav>h1 {
   background: #e4e9eb;
 }
 .hexagon-row-2 {
+  display: -ms-flexbox;
   display: grid;
   width: 1220px;
   height: 272px;
@@ -188,8 +193,8 @@ nav>h1 {
   align-content: center;
 }
 .hexagon {    
-  width: 100%;
-  height: 100%;
+  width: 225px;
+  height: 272px;
   overflow: hidden;
   transform: rotate(60deg);     
 }
@@ -283,9 +288,12 @@ nav>h1 {
 /*                                      section "ABOUT"                         */
 
 #about {
+  display: -ms-grid;
   display: grid;
   height: 426px;
+  -ms-grid-columns: 1fr 225px 553px 200px 1fr;
   grid-template-columns: 225px 553px 200px;
+  -ms-grid-rows: 1fr 130px 130px 130px 1fr;
   grid-template-rows: repeat(3, 130px);
   justify-content: center;
   align-content: center;
@@ -295,9 +303,12 @@ nav>h1 {
 .photo-box {
   position: relative;
   display: flex;
-  width: 225px;
-  height: 271px;     
-  align-items: center;
+  width: 225px;  
+  height: 100%; 
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column-span: 1;
   grid-area: 1 / 1 / span 3 / span 1;
 }
 .photo-box::before {
@@ -308,16 +319,39 @@ nav>h1 {
   height: 393px;
   background: #219d84;
 }
+.photo-box .hexagon {
+  align-self: center;
+}
 .photo-box .image {  
   background-image: url("assets/images/image.png");    
   background-size: cover;   
 }
 .fio {
+  position: relative;
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  height: 100%;
   padding-bottom: 5px;
   padding-left: 25px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column-span: 2;
   grid-area: 1 / 2 / span 1 / span 2;    
-  font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular";
-  align-self: end;    
+  font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
+  align-self: end; 
+  justify-content: flex-end;   
+}
+.fio::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: -24px;
+  width: 2px;
+  height: 393px;
+  background: #219d84;
 }
 .fio>h1 {    
   font-size: 36px;
@@ -330,27 +364,29 @@ nav>h1 {
   font-weight: 300;
 }
 .about-text {
-  position: relative;
+  display: flex;
+  display: -ms-flexbox;
+  align-items: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column-span: 2;
   grid-area: 2 / 2 / span 1 / span 2;
   padding-left: 25px;
-  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular";
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
   font-size: 14px;
   color: rgba(215, 252, 245, 255);
   font-weight: 400;   
   line-height: 26.4px;  
   text-align: justify;
 }
-.about-text::after {
-  content: "";
-  position: absolute;
-  top: -144px;
-  right: -24px;
-  width: 2px;
-  height: 393px;
-  background: #219d84;
-}
+
 .social-media {
   display: flex;
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column-span: 1;
   grid-area: 3 / 3 / span 1 / span 1;  
   padding-bottom: 30px;
   padding-left: 16px;
@@ -383,8 +419,11 @@ footer {
 }
 .box {    
   position: relative;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 730px 242px 1fr;
   grid-template-columns: 730px 242px;
+  -ms-grid-rows: 1fr 76px 516px 1fr;
   grid-template-rows: 76px 516px;
   margin-top: 58px;
   align-content: center;
@@ -401,11 +440,15 @@ footer {
   background: #2b2b2b;
 }
 .feedback-info {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column-span: 2;
   grid-area: 1 / 1 / span 1 / span 2;
   height: 99px;
   width: 780px;
   justify-self: start;  
-  font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular";
+  font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
 }
 .feedback-info>h2 {    
   font-size: 36px;
@@ -421,6 +464,10 @@ footer {
 form {
   width: 724px;
   height: 522px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 1 / span 1 / span 1;    
   justify-self: start;           
 }
@@ -431,7 +478,7 @@ fieldset {
 }
 input::placeholder, textarea::placeholder {
   color: rgba(190, 190, 190, 255);
-  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular";
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
   font-size: 14px;
 }
 input {    
@@ -454,12 +501,13 @@ input {
   background: #454545;
   resize: none;
   color: rgba(190, 190, 190, 255);   
+  -ms-overflow-y: auto;
 }
 .btn {
   display: block;
   float: right;
   background: #2eb398;
-  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular";
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
   font-size: 14px;
   color: rgba(215, 252, 245, 255);
   text-align: center;
@@ -468,11 +516,15 @@ input {
   height: 44px;
 }
 .quote { 
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column-span: 1;
   grid-area: 2 / 2 / span 1 / span 1;
   margin-top: -2px;
   padding-left: 19px;
   align-self: start;
-  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular";
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
   font-size: 15px;
   color: rgba(190, 190, 190, 255);
   text-align: justify;
@@ -501,11 +553,12 @@ input {
   padding-left: 3px;
 }
 .copyright {
+  display: -ms-flexbox;
   display: flex;
   height: 50px;
   padding-left: 48px;
   align-items: center;
-  font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular";
+  font-family: "Maven Pro", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
   font-size: 14px;
   color: rgba(69, 69, 69, 255);
   word-spacing: 0.07rem;
